@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <main className="flex-1">
         <Routes>
-          <Route path="/taynara-advocacia" element={<Home />} />
+          <Route path="/taynara-advocacia/" element={<Home />} />
           <Route path="/obrigada" element={<ThankYou />} />
           <Route path="/termos" element={<Terms />} />
         </Routes>
