@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
+        <Link to="/taynara-advocacia" className="flex items-center space-x-2" onClick={closeMenu}>
           <Scale className="h-8 w-8 text-primary" />
           <span className="font-serif text-xl font-semibold text-primary">
             Taynara Paulina

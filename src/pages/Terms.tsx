@@ -17,7 +17,7 @@ const Terms: React.FC = () => {
     document.body.style.transition = 'opacity 300ms ease-in-out';
     
     setTimeout(() => {
-      navigate('/');
+      navigate('/taynara-advocacia');
       document.body.style.opacity = '1';
     }, 300);
   };
@@ -27,7 +27,7 @@ const Terms: React.FC = () => {
       <div className="container mx-auto max-w-3xl bg-white p-8 rounded-lg shadow-md">
         <div className="mb-8">
           <a 
-            href="/"
+            href="/taynara-advocacia"
             onClick={handleSmoothNavigate}
             className="inline-flex items-center text-primary hover:text-primary-dark transition-colors"
           >

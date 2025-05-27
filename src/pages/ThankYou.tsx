@@ -48,7 +48,7 @@ const ThankYou: React.FC = () => {
             🔗 Continue navegando:
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            <Link to="/" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
+            <Link to="/taynara-advocacia" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
               <Home className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Home</span>
             </Link>
