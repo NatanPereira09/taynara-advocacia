@@ -57,12 +57,12 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <NavLink href="/taynara-advocacia#home" label="Home" />
-          <NavLink href="/taynara-advocacia#quem-sou" label="Quem sou" />
-          <NavLink href="/taynara-advocacia#parcerias" label="Parcerias" />
-          <NavLink href="/taynara-advocacia#areas-atuacao" label="Áreas de Atuação" />
-          <NavLink href="/taynara-advocacia#consultas" label="Consultas" />
-          <NavLink href="/taynara-advocacia#contato" label="Contato" />
+          <NavLink href="#home" label="Home" />
+          <NavLink href="#quem-sou" label="Quem sou" />
+          <NavLink href="#parcerias" label="Parcerias" />
+          <NavLink href="#areas-atuacao" label="Áreas de Atuação" />
+          <NavLink href="#consultas" label="Consultas" />
+          <NavLink href="#contato" label="Contato" />
           <a
             href="/termos"
             onClick={handleSmoothNavigate}
@@ -86,13 +86,13 @@ const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md animate-fadeIn">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <MobileNavLink href="/taynara-advocacia#home" label="Home" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#quem-sou" label="Quem sou" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#parcerias" label="Parcerias" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#areas-atuacao" label="Áreas de Atuação" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#consultas" label="Consultas" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#blog" label="Blog" onClick={closeMenu} />
-            <MobileNavLink href="/taynara-advocacia#contato" label="Contato" onClick={closeMenu} />
+            <MobileNavLink href="#home" label="Home" onClick={closeMenu} />
+            <MobileNavLink href="#quem-sou" label="Quem sou" onClick={closeMenu} />
+            <MobileNavLink href="#parcerias" label="Parcerias" onClick={closeMenu} />
+            <MobileNavLink href="#areas-atuacao" label="Áreas de Atuação" onClick={closeMenu} />
+            <MobileNavLink href="#consultas" label="Consultas" onClick={closeMenu} />
+            <MobileNavLink href="#blog" label="Blog" onClick={closeMenu} />
+            <MobileNavLink href="#contato" label="Contato" onClick={closeMenu} />
             <a
               href="/termos"
               onClick={(e) => {
