@@ -9,26 +9,15 @@ const Navbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-  };
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   const handleSmoothNavigate = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -117,9 +106,26 @@ interface NavLinkProps {
 }
 
 const NavLink: React.FC<NavLinkProps> = ({ href, label }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+
+    if (window.location.pathname !== '/taynara-advocacia') {
+      navigate(`/taynara-advocacia#${id}`);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <a
       href={href}
+      onClick={handleClick}
       className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium"
     >
       {label}
@@ -128,11 +134,28 @@ const NavLink: React.FC<NavLinkProps> = ({ href, label }) => {
 };
 
 const MobileNavLink: React.FC<NavLinkProps> = ({ href, label, onClick }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    onClick?.();
+    const id = href.replace('#', '');
+
+    if (window.location.pathname !== '/taynara-advocacia') {
+      navigate(`/taynara-advocacia#${id}`);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <a
       href={href}
+      onClick={handleClick}
       className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium py-2 border-b border-gray-100"
-      onClick={onClick}
     >
       {label}
     </a>
