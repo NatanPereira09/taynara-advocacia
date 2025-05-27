@@ -8,6 +8,17 @@ import Partnerships from '../components/Partnerships';
 const Home: React.FC = () => {
   useEffect(() => {
     document.title = 'Taynara Paulina | Advogada';
+
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
   }, []);
 
   return (
