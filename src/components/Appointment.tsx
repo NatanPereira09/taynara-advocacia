@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from './Button';
 import { Calendar, Monitor, MapPin, MessageCircle } from 'lucide-react';
 
@@ -24,6 +25,8 @@ const Appointment: React.FC = () => {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const navigate = useNavigate(); 
 
   const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mzzrqwqp';
 
@@ -65,9 +68,9 @@ const Appointment: React.FC = () => {
         setSubmitStatus('success');
         setFormData(initialFormData); // Limpa o formulário
         
-        // Opcional: redirecionar para página de agradecimento após 1 segundos
+        // Redireciona para página de agradecimento sem recarregar a página
         setTimeout(() => {
-          window.location.href = '/obrigada';
+          navigate('/obrigada');
         }, 1000);
       } else {
         throw new Error('Erro ao enviar formulário');
