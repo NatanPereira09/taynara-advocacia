@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './Button';
 import { MessageCircle, Calendar } from 'lucide-react';
+import TaynaraHero from "../assets/taynara-hero.webp";
+import TaynaraHeroMobile from "../assets/taynara-hero-mobile.webp";
 
 const Hero: React.FC = () => {
   return (
@@ -10,12 +12,12 @@ const Hero: React.FC = () => {
     >
     {/* Imagem para desktop */}
     <div className="absolute inset-0 bg-cover bg-center opacity-50 hidden md:block">
-      <img className="w-full h-full object-cover" src="src/assets/taynara-hero.webp" alt="Taynara Hero Desktop" />
+      <img className="w-full h-full object-cover" src={TaynaraHero} alt="Taynara Hero Desktop" />
     </div>
 
     {/* Imagem para mobile */}
     <div className="absolute inset-0 bg-cover bg-center opacity-50 block md:hidden">
-      <img className="w-full h-full object-cover" src="src/assets/taynara-hero-mobile.webp" alt="Taynara Hero Mobile" />
+      <img className="w-full h-full object-cover" src={TaynaraHeroMobile} alt="Taynara Hero Mobile" />
     </div>
       
       <div className="container mx-auto px-4 md:px-6 py-16 relative z-10">

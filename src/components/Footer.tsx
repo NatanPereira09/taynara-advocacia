@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Scale, MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
+import FaviconNm from "../assets/favicon-nm.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -149,7 +150,7 @@ const Footer: React.FC = () => {
         </div>
         <p className="text-center text-sm text-gray-400 mb-3 flex items-center justify-center">
           Criado por
-          <img src="src\assets\favicon-nm.svg" alt="Logo NM" className="w-14 h-14" />
+          <img src={FaviconNm} alt="Logo NM" className="w-14 h-14" />
         </p>
 
         <div className="border-t border-gray-800 pt-8">
