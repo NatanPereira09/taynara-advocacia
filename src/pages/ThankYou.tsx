@@ -52,19 +52,19 @@ const ThankYou: React.FC = () => {
               <Home className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Home</span>
             </Link>
-            <a href="/#quem-sou" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
+            <a href="/taynara-advocacia#quem-sou" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
               <User className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Quem sou</span>
             </a>
-            <a href="/#parcerias" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
+            <a href="/taynara-advocacia#parcerias" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
               <Users className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Parcerias</span>
             </a>
-            <a href="/#areas-atuacao" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
+            <a href="/taynara-advocacia#areas-atuacao" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
               <Briefcase className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Áreas de Atuação</span>
             </a>
-            <a href="/#consultas" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
+            <a href="/taynara-advocacia#consultas" className="flex flex-col items-center p-3 bg-gray-50 rounded-md hover:bg-gray-100 transition-colors">
               <Calendar className="w-5 h-5 text-primary mb-1" />
               <span className="text-sm text-center">Consultas</span>
             </a>
