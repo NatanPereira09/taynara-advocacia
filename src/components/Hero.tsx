@@ -10,12 +10,12 @@ const Hero: React.FC = () => {
     >
     {/* Imagem para desktop */}
     <div className="absolute inset-0 bg-cover bg-center opacity-50 hidden md:block">
-      <img className="w-full h-full object-cover" src="src/assets/taynara-hero.webp" alt="Taynara Hero Desktop" />
+      <img className="w-full h-full object-cover" src="taynara-hero.webp" alt="Taynara Hero Desktop" />
     </div>
 
     {/* Imagem para mobile */}
     <div className="absolute inset-0 bg-cover bg-center opacity-50 block md:hidden">
-      <img className="w-full h-full object-cover" src="src/assets/taynara-hero-mobile.webp" alt="Taynara Hero Mobile" />
+      <img className="w-full h-full object-cover" src="taynara-hero-mobile.webp" alt="Taynara Hero Mobile" />
     </div>
       
       <div className="container mx-auto px-4 md:px-6 py-16 relative z-10">
