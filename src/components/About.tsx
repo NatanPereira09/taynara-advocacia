@@ -1,4 +1,5 @@
 import React from "react";
+import TaynaraImg from "../assets/taynara-1.webp";
 
 const About: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const About: React.FC = () => {
               <div className="relative w-[90%] mx-auto md:w-full">
                 <div className="absolute -top-2 -left-2 w-full h-full border-2 border-primary md:-top-4 md:-left-4"></div>
                 <img
-                  src="src/assets/taynara-1.webp"
+                  src={TaynaraImg}
                   alt="Dra. Taynara Paulina"
                   className="w-full h-auto object-cover z-10 relative"
                 />
