@@ -36,7 +36,7 @@ const ThankYou: React.FC = () => {
             <Button 
               variant="primary" 
               icon={<MessageCircle size={18} />}
-              onClick={() => window.open('https://wa.me/5543988248965', '_blank')}
+               onClick={() => window.open('https://wa.me/5543988248965?text=Olá! Cheguei até aqui por meio do seu site e gostaria de agendar um atendimento jurídico. Poderia, por gentileza, me informar os horários disponíveis?', '_blank')}
             >
               Enviar mensagem pelo WhatsApp
             </Button>

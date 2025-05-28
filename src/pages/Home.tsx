@@ -3,7 +3,6 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Services from '../components/Services';
 import Appointment from '../components/Appointment';
-import Partnerships from '../components/Partnerships';
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -24,10 +23,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Hero />
-      <About />
       <Services />
+      <About />
       <Appointment />
-      <Partnerships />
     </>
   );
 };

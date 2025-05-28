@@ -168,7 +168,7 @@ const Appointment: React.FC = () => {
                       className="transition-all duration-300 transform hover:-translate-y-1"
                       variant="primary"
                       icon={<MessageCircle size={16} />}
-                      onClick={() => window.open('https://wa.me/5543988248965', '_blank')}
+                      onClick={() => window.open('https://wa.me/5543988248965?text=Olá! Cheguei até aqui por meio do seu site e gostaria de agendar um atendimento jurídico. Poderia, por gentileza, me informar os horários disponíveis?', '_blank')}
                     >
                       Falar pelo WhatsApp
                     </Button>

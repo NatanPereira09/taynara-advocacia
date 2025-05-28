@@ -4,6 +4,10 @@ import { Scale, MapPin, Phone, Mail, Instagram, Linkedin } from "lucide-react";
 import FaviconNm from "../assets/favicon-nm.svg";
 
 const Footer: React.FC = () => {
+  // Mensagem pré-definida para o WhatsApp
+  const whatsappMessage = "Olá! Cheguei até aqui por meio do seu site e gostaria de agendar um atendimento jurídico. Poderia, por gentileza, me informar os horários disponíveis?";
+  const whatsappURL = `https://wa.me/5543988248965?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
     <footer id="contato" className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-6">
@@ -46,7 +50,7 @@ const Footer: React.FC = () => {
             <p className="flex items-center mb-2 text-gray-300">
               <Phone className="w-4 h-4 mr-2" />
               <a
-                href="https://wa.me/5543988248965"
+                href={whatsappURL}
                 className="hover:text-primary transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -83,7 +87,7 @@ const Footer: React.FC = () => {
                 <Instagram className="w-6 h-6" />
               </a>
               <a
-                href="linkedin.com/in/taynara-paulina-o-martins-327a1a2b2"
+                href="https://www.linkedin.com/in/taynara-paulina-o-martins-327a1a2b2/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-primary transition-colors"
@@ -150,7 +154,9 @@ const Footer: React.FC = () => {
         </div>
         <p className="text-center text-sm text-gray-400 mb-3 flex items-center justify-center">
           Criado por
-          <img src={FaviconNm} alt="Logo NM" className="w-14 h-14" />
+          <a href="https://www.instagram.com/nminovacoestech/" target="_blank">
+            <img src={FaviconNm} alt="Logo NM" className="w-14 h-14" />
+          </a>
         </p>
 
         <div className="border-t border-gray-800 pt-8">

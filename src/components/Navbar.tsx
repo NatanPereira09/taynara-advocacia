@@ -19,13 +19,13 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  const handleSmoothNavigate = (e: React.MouseEvent) => {
+  const handleSmoothNavigate = (e: React.MouseEvent, path: string) => {
     e.preventDefault();
     document.body.style.opacity = '0';
     document.body.style.transition = 'opacity 300ms ease-in-out';
 
     setTimeout(() => {
-      navigate('/termos');
+      navigate(path);
       document.body.style.opacity = '1';
     }, 300);
   };
@@ -47,14 +47,20 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
           <NavLink href="#home" label="Home" />
-          <NavLink href="#quem-sou" label="Quem sou" />
-          <NavLink href="#parcerias" label="Parcerias" />
           <NavLink href="#areas-atuacao" label="Áreas de Atuação" />
+          <NavLink href="#quem-sou" label="Quem sou" />
           <NavLink href="#consultas" label="Consultas" />
+          <a
+            href="/parcerias"
+            onClick={(e) => handleSmoothNavigate(e, '/parcerias')}
+            className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium"
+          >
+            Parcerias
+          </a>
           <NavLink href="#contato" label="Contato" />
           <a
             href="/termos"
-            onClick={handleSmoothNavigate}
+            onClick={(e) => handleSmoothNavigate(e, '/termos')}
             className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium"
           >
             Termos de uso
@@ -77,16 +83,24 @@ const Navbar: React.FC = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <MobileNavLink href="#home" label="Home" onClick={closeMenu} />
             <MobileNavLink href="#quem-sou" label="Quem sou" onClick={closeMenu} />
-            <MobileNavLink href="#parcerias" label="Parcerias" onClick={closeMenu} />
+            <a
+              href="/parcerias"
+              onClick={(e) => {
+                closeMenu();
+                handleSmoothNavigate(e, '/parcerias');
+              }}
+              className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium py-2 border-b border-gray-100"
+            >
+              Parcerias
+            </a>
             <MobileNavLink href="#areas-atuacao" label="Áreas de Atuação" onClick={closeMenu} />
             <MobileNavLink href="#consultas" label="Consultas" onClick={closeMenu} />
-            <MobileNavLink href="#blog" label="Blog" onClick={closeMenu} />
             <MobileNavLink href="#contato" label="Contato" onClick={closeMenu} />
             <a
               href="/termos"
               onClick={(e) => {
                 closeMenu();
-                handleSmoothNavigate(e);
+                handleSmoothNavigate(e, '/termos');
               }}
               className="text-gray-800 hover:text-primary transition-all duration-300 transform hover:-translate-y-1 font-medium py-2 border-b border-gray-100"
             >
